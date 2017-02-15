@@ -1,0 +1,26 @@
+<!DOCUMENT HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<script>
+  function pow(x, n) {
+	var result = x;
+	for (var i = 0; i < n - 1; i++) {
+		result *= x;
+	}
+	return result;
+  }
+  var x = prompt('Введите x', '');
+  var n = prompt('Введите n (n > 0)', '');
+  if (+x && +n) {
+	alert(pow(+x, +n));
+  } else if (x == '') {
+	alert( 'Ошибка! Вы не ввели x.' );
+  } else if (n == '') {
+	alert( 'Ошибка! Вы не ввели n.' );
+  } else if (n < 1) {
+	alert ( 'Ошибка! Вы ввели n < 1.' );
+  } else alert( 'Ошибка! Вы ввели нечисловое значение!' );
+</script>	
+</html>
